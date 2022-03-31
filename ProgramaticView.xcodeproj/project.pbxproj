@@ -15,6 +15,9 @@
 		842250542799540800F528E1 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842250532799540800F528E1 /* BaseVC.swift */; };
 		842250562799587700F528E1 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842250552799587700F528E1 /* UIImage+Extension.swift */; };
 		842250582799590A00F528E1 /* ImageAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842250572799590A00F528E1 /* ImageAssets.swift */; };
+		8451F69127ECA6F800F6D2F7 /* OTPFieldsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451F69027ECA6F800F6D2F7 /* OTPFieldsView.swift */; };
+		8451F69327ECA79200F6D2F7 /* OTPTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451F69227ECA79200F6D2F7 /* OTPTextfield.swift */; };
+		8451F69527ECA84E00F6D2F7 /* OTPStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451F69427ECA84E00F6D2F7 /* OTPStyle.swift */; };
 		84AD9AD327D8ECF500635774 /* CollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD9AD227D8ECF500635774 /* CollectionVC.swift */; };
 		84AD9AD527D8FB4600635774 /* ImageViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD9AD427D8FB4600635774 /* ImageViewFactory.swift */; };
 		84F626EE2791ADCC000337A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F626ED2791ADCC000337A5 /* AppDelegate.swift */; };
@@ -39,6 +42,9 @@
 		842250532799540800F528E1 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		842250552799587700F528E1 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		842250572799590A00F528E1 /* ImageAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAssets.swift; sourceTree = "<group>"; };
+		8451F69027ECA6F800F6D2F7 /* OTPFieldsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPFieldsView.swift; sourceTree = "<group>"; };
+		8451F69227ECA79200F6D2F7 /* OTPTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextfield.swift; sourceTree = "<group>"; };
+		8451F69427ECA84E00F6D2F7 /* OTPStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPStyle.swift; sourceTree = "<group>"; };
 		84AD9AD227D8ECF500635774 /* CollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionVC.swift; sourceTree = "<group>"; };
 		84AD9AD427D8FB4600635774 /* ImageViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewFactory.swift; sourceTree = "<group>"; };
 		84F626EA2791ADCC000337A5 /* ProgramaticView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProgramaticView.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +85,7 @@
 		840F529E27957EE000FA607D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8451F68F27ECA6E200F6D2F7 /* OTPFields */,
 				84F626F12791ADCC000337A5 /* ViewController.swift */,
 				84AD9AD227D8ECF500635774 /* CollectionVC.swift */,
 			);
@@ -112,6 +119,16 @@
 				842250572799590A00F528E1 /* ImageAssets.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		8451F68F27ECA6E200F6D2F7 /* OTPFields */ = {
+			isa = PBXGroup;
+			children = (
+				8451F69027ECA6F800F6D2F7 /* OTPFieldsView.swift */,
+				8451F69227ECA79200F6D2F7 /* OTPTextfield.swift */,
+				8451F69427ECA84E00F6D2F7 /* OTPStyle.swift */,
+			);
+			path = OTPFields;
 			sourceTree = "<group>";
 		};
 		84F626E12791ADCB000337A5 = {
@@ -268,8 +285,11 @@
 				84AD9AD327D8ECF500635774 /* CollectionVC.swift in Sources */,
 				84225049279935E700F528E1 /* AppStyle.swift in Sources */,
 				84F627032791B024000337A5 /* LayoutAttributes.swift in Sources */,
+				8451F69327ECA79200F6D2F7 /* OTPTextfield.swift in Sources */,
 				8422504B2799463A00F528E1 /* StringConstants.swift in Sources */,
+				8451F69127ECA6F800F6D2F7 /* OTPFieldsView.swift in Sources */,
 				84F6270E2791C520000337A5 /* LabelFactory.swift in Sources */,
+				8451F69527ECA84E00F6D2F7 /* OTPStyle.swift in Sources */,
 				842250562799587700F528E1 /* UIImage+Extension.swift in Sources */,
 				84F626F02791ADCC000337A5 /* SceneDelegate.swift in Sources */,
 				84F627082791B5A1000337A5 /* UIStackView+Extension.swift in Sources */,

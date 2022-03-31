@@ -23,7 +23,7 @@ class ViewController: BaseVC {
     lazy var newToLabel = LabelFactory(textStyle: .subtitle, text: .newToThisApp, alignment: .center)
     
     lazy var signUpButton = ButtonFactory(title: .signUp)
-    
+    var otpFields: OTPFieldsView!
     lazy var stack = UIStackView()
     
     lazy var tfStack = UIStackView()
@@ -37,6 +37,7 @@ class ViewController: BaseVC {
         setUpViews()
         addViews()
         
+        setupTextfieldss()
         setUpConstraints()
         setUpTextfield()
         setUpSubmitButton()
@@ -57,6 +58,11 @@ private extension ViewController {
         textfield.placeholder = "Phone Number"
     }
     
+    func setupTextfieldss() {
+        otpFields = OTPFieldsView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width - 40, height: 50), style: OTPStyle())
+        otpFields.delegate = self
+    }
+    
     func setUpViews() {
         stack = [
             titleLabel,
@@ -73,19 +79,14 @@ private extension ViewController {
     
     func setUpTextfield() {
         tfStack = [
-            textfield,
-            [
-                rememberLabel,
-                switchh
-            ].asStackView(spacing: 8)
-        ].asStackView(axis: .vertical, spacing: 20, alignment: .center)
+            (otpFields as UIView)
+        ].asStackView(axis: .vertical, spacing: 20)
         
         view.addSubview(tfStack)
-        textfield
-            .height(constant: 50)
         tfStack
             .toBottomOf(stack, constant: 80)
             .alignEdgesWithSuperview([.right, .left], constant: 20)
+            .height(constant: 90)
     }
     
     func setUpSubmitButton() {
@@ -120,6 +121,18 @@ private extension ViewController {
     @objc
     func onClickSignUpButton(_ sender: UIButton) {
         print("Sign up taped")
+    }
+    
+}
+
+extension ViewController: OTPFieldsViewDelegate {
+    
+    func hasEnteredAllOTP(_ hasEntered: Bool) {
+        print(hasEntered)
+    }
+    
+    func enteredOTP(_ otp: String) {
+        print(otp)
     }
     
 }
