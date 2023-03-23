@@ -21,11 +21,9 @@ public extension UIView {
     }
     
     @discardableResult func alignEdges(_ edges: [ LayoutEdge], withView view: UIView, _ constantModifier:  LayoutConstantModifier = .equalTo, constants: [CGFloat], priority: UILayoutPriority = .required) -> UIView {
-        
         for edge in edges {
             _ = alignEdge(edge, withView: view, constantModifier, constant: constants[edges.firstIndex(of: edge) ?? 0], priority: priority)
         }
-        
         return self
     }
 }
@@ -34,7 +32,6 @@ public extension UIView {
 
 public extension UIView {
     @discardableResult func width(_ constantModifier:  LayoutConstantModifier = .equalTo, constant: CGFloat, priority: UILayoutPriority = .required) -> UIView {
-        
         let constraint: NSLayoutConstraint
         
         switch constantModifier {
@@ -52,7 +49,6 @@ public extension UIView {
     }
     
     @discardableResult func height(_ constantModifier:  LayoutConstantModifier = .equalTo, constant: CGFloat, priority: UILayoutPriority = .required) -> UIView {
-        
         let constraint: NSLayoutConstraint
         
         switch constantModifier {
@@ -70,12 +66,10 @@ public extension UIView {
     }
     
     @discardableResult func height(with edge:  LayoutEdge, _ constantModifier:  LayoutConstantModifier = .equalTo, ofView view: UIView, multiplier: CGFloat = 1.0, constant: CGFloat = 0, priority: UILayoutPriority = .required) -> UIView {
-        
         return pinDimensionEdge(.height, toEdge: edge, ofView: view, constantModifier, mutliplier: multiplier, constant: constant, priority: priority)
     }
     
     @discardableResult func width(with edge:  LayoutEdge, _ constantModifier:  LayoutConstantModifier = .equalTo, ofView view: UIView, multiplier: CGFloat = 1.0, constant: CGFloat = 0, priority: UILayoutPriority = .required) -> UIView {
-        
         return pinDimensionEdge(.width, toEdge: edge, ofView: view, constantModifier, mutliplier: multiplier, constant: constant, priority: priority)
     }
     
@@ -177,7 +171,6 @@ public extension UIView {
     }
     
     @discardableResult func pinEdge(_ edge1:  LayoutEdge, toEdge edge2:  LayoutEdge, ofView view: UIView, _ constantModifier:  LayoutConstantModifier = .equalTo, constant: CGFloat = 0, priority: UILayoutPriority = .required) -> UIView {
-        
         if edge1.axis != edge2.axis {
             assertionFailure(" Layout Error: all edges of same constraint must be of same axis")
         }
@@ -227,7 +220,6 @@ private extension UIView {
     }
     
     @discardableResult func pinVerticalEdge(_ edge1:  LayoutEdge, toEdge edge2:  LayoutEdge, ofView view: UIView, _ constantModifier:  LayoutConstantModifier = .equalTo, constant: CGFloat = 0, priority: UILayoutPriority = .required) -> UIView {
-        
         let constraint: NSLayoutConstraint
         
         if edge1 != .bottom && edge1 != .safeAreaBottom && edge1 != .bottomAvoidingKeyboard && edge2 != .safeAreaBottomAvoidingKeyboard {
@@ -261,7 +253,6 @@ private extension UIView {
     }
     
     @discardableResult func pinDimensionEdge(_ edge1:  LayoutEdge, toEdge edge2:  LayoutEdge, ofView view: UIView, _ constantModifier:  LayoutConstantModifier = .equalTo, mutliplier: CGFloat = 1, constant: CGFloat = 0, priority: UILayoutPriority = .required) -> UIView {
-        
         let constraint: NSLayoutConstraint
         
         switch constantModifier {
